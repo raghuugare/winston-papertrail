@@ -3,7 +3,7 @@ Npm.depends(
 {
   "winston": "1.0.0",
   "winston-papertrail": "1.0.1",
-};
+});
 
 var winston = Npm.require('winston');
 
