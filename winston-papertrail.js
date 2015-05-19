@@ -14,19 +14,24 @@ var paperTrailConfig = {
     json: true,
 }
 
+var consoleConfig = {
+    colorize: true,
+    json: true    
+}
+
+var transportConsole = new winston.transports.Console(consoleConfig);
+
 
 var transportPaperTrail = new winston.transports.Papertrail(paperTrailConfig);
 
 logger = new (winston.Logger)({
     transports: [
       transportPaperTrail,
-      transportLogEntries,
-      new winston.transports.Console
+      transportConsole
     ],
     exceptionHandlers: [
       transportPaperTrail,
-      transportLogEntries,
-      new winston.transports.Console
+      transportConsole
     ]
   });
 
