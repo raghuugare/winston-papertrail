@@ -1,10 +1,4 @@
 // Write your package code here!
-Npm.depends(
-{
-  "winston": "1.0.0",
-  "winston-papertrail": "1.0.1",
-});
-
 var winston = Npm.require('winston');
 
 var Papertrail = Npm.require('winston-papertrail').Papertrail;
